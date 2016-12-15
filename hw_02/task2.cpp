@@ -2,11 +2,16 @@
 
 using namespace std;
 
+const int n = 6;
+const int m = 5;
+
+void print_element_at(int matrix[][m], int index)
+{
+	cout << matrix[index / m][index % m] << endl;
+}
+
 int main(int argc, char const *argv[])
 {
-	const int n = 6;
-	const int m = 5;
-
 	int matrix[n][m] = {
 		{11, 12, 13, 14, 15},
 		{21, 22, 23, 24, 25},
@@ -25,7 +30,7 @@ int main(int argc, char const *argv[])
 		return -1;
 	}
 
-	cout << matrix[index / m][index % m] << endl;
+	print_element_at(matrix, index);
 
 	return 0;
 }
